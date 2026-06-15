@@ -5,7 +5,7 @@ source_note_id: "1912602630443802744"
 title: "MVP最小可行产品思维讲解与实践方法"
 source_url: "https://biji.ddmaster.com/note/1912879709520320784"
 share_url: "https://biji.ddmaster.com/note/share_note/6gBW134nLK4ly"
-generated_at: "2026-06-15T07:35:04.437Z"
+generated_at: "2026-06-15T08:42:57.796Z"
 ---
 
 # MVP最小可行产品思维讲解与实践方法：清洗版素材库

@@ -8,7 +8,7 @@ const legacyMaterials = new Map([
     '0-素材边界',
     [
       {
-        src: '../../assets/class-images/03-003_aJR6Tk-01.jpg',
+        src: 'assets/class-images/03-003_aJR6Tk-01.jpg',
         title: '课程资料封面',
         caption: '商业内生增长心法 / AI时代的商业升级与落地实战。',
       },
@@ -18,7 +18,7 @@ const legacyMaterials = new Map([
     '3-术法道器势总表',
     [
       {
-        src: '../../assets/class-images/01-001_WadRXb-01.jpg',
+        src: 'assets/class-images/01-001_WadRXb-01.jpg',
         title: '课堂投影：成功公式',
         caption: '底层规律、方法论、执行关键三组结构，对应“术法道器势”的主框架。',
       },
@@ -28,7 +28,7 @@ const legacyMaterials = new Map([
     '4-3-第三层-成功公式',
     [
       {
-        src: '../../assets/class-images/08-008_2irXy8-01.jpg',
+        src: 'assets/class-images/08-008_2irXy8-01.jpg',
         title: '课堂资料：创业进阶里程碑与成功公式',
         caption: '成功=底层规律×系统方法×长期主义。',
       },
@@ -38,7 +38,7 @@ const legacyMaterials = new Map([
     '5-12-未来商业黄金三角-ai-ip-流量',
     [
       {
-        src: '../../assets/class-images/09-009_4YSOi6-01.jpg',
+        src: 'assets/class-images/09-009_4YSOi6-01.jpg',
         title: '课堂资料：未来商业黄金三角',
         caption: '用 AI 提升效率，用 IP 建立信任，用流量扩大覆盖。',
       },
@@ -48,17 +48,17 @@ const legacyMaterials = new Map([
     '10-关键人物与资源',
     [
       {
-        src: '../../assets/class-images/04-004_N9x3aV-01.jpg',
+        src: 'assets/class-images/04-004_N9x3aV-01.jpg',
         title: '课堂资料：岗位与指标',
         caption: '把业务增长拆到岗位、动作和可衡量指标上。',
       },
       {
-        src: '../../assets/class-images/05-005_ZB1Yt8-01.jpg',
+        src: 'assets/class-images/05-005_ZB1Yt8-01.jpg',
         title: '课堂资料：团队协作',
         caption: '商业落地不是一个人的灵感，而是组织内不同角色的协同。',
       },
       {
-        src: '../../assets/class-images/06-006_hrgnBL-01.jpg',
+        src: 'assets/class-images/06-006_hrgnBL-01.jpg',
         title: '课堂资料：资源盘点',
         caption: '能力、资源、时间和现金流都要进入创业判断。',
       },
@@ -68,12 +68,12 @@ const legacyMaterials = new Map([
     '11-课堂资料补全清单',
     [
       {
-        src: '../../assets/class-images/02-002_FPxXcR-01.jpg',
+        src: 'assets/class-images/02-002_FPxXcR-01.jpg',
         title: '课堂资料：AI 时代商业升级',
         caption: '围绕 AI、IP、流量与商业结果搭建业务系统。',
       },
       {
-        src: '../../assets/class-images/07-007_IG4eG7-01.jpg',
+        src: 'assets/class-images/07-007_IG4eG7-01.jpg',
         title: '课堂资料：行动路径',
         caption: '从认知框架进入执行动作，减少只听不做。',
       },
@@ -84,14 +84,8 @@ const legacyMaterials = new Map([
 const notes = [
   {
     id: '1912868579112712840',
-    title: '洋哥商业心法 · 术法道器势深度拆解',
     shortTitle: '商业心法总纲',
     subtitle: 'AI 创业、商业增长、IP、流量与长期主义的总框架。',
-    duration: '31:56',
-    sourceUrl: 'https://biji.ddmaster.com/note/1912868579112712840',
-    markdownPath: path.join(root, 'analysis.md'),
-    markdownHref: '../../analysis.md',
-    heroImage: '../../assets/class-images/03-003_aJR6Tk-01.jpg',
     materials: legacyMaterials,
   },
   {
@@ -300,7 +294,6 @@ function markdownToHtml(markdown, materials = new Map()) {
 }
 
 async function readMeta(note) {
-  if (note.markdownPath) return note;
   const metaPath = path.join(root, 'notes', note.id, 'meta.json');
   const meta = JSON.parse(await fs.readFile(metaPath, 'utf8'));
   return {
@@ -311,6 +304,13 @@ async function readMeta(note) {
     shareUrl: meta.share_url,
     markdownPath: path.join(root, 'notes', note.id, 'analysis.md'),
     markdownHref: 'analysis.md',
+    materialsPath: path.join(root, 'notes', note.id, 'sources', 'normalized-materials.md'),
+    materialsHref: 'materials.html',
+    summaryChars: meta.summary_chars,
+    transcriptSentences: meta.transcript_sentences,
+    classImages: meta.class_images,
+    sourceNoteId: meta.source_note_id,
+    access: meta.access || (meta.share_id ? 'public-share' : 'unknown'),
   };
 }
 
@@ -338,6 +338,7 @@ function renderHeader(prefix = '') {
       <div>
         <a href="${prefix}index.html#notes">全部拆解</a>
         <a href="${prefix}index.html#framework">总框架</a>
+        <a href="${prefix}audit.html">素材核对</a>
         <a href="${prefix}README.md">仓库说明</a>
       </div>
     </nav>
@@ -358,6 +359,7 @@ async function renderNotePage(note) {
         <p class="lead">${escapeHtml(note.subtitle || '基于智能总结、文字记录和课堂资料重新拆解。')}</p>
         <div class="actions">
           <a class="button primary" href="#1-如果只读-10-分钟">开始阅读</a>
+          <a class="button ghost" href="${note.materialsHref}">智能总结 / 逐字稿 / 课堂资料</a>
           <a class="button ghost" href="${note.markdownHref}">Markdown 原稿</a>
         </div>
       </div>
@@ -376,6 +378,139 @@ ${articleHtml}
   const outDir = path.join(root, 'notes', note.id);
   await fs.mkdir(outDir, { recursive: true });
   await fs.writeFile(path.join(outDir, 'index.html'), html, 'utf8');
+}
+
+async function renderMaterialsPage(note) {
+  let markdown = '';
+  try {
+    markdown = await fs.readFile(note.materialsPath, 'utf8');
+  } catch {
+    markdown = '# 素材库\n\n_当前笔记没有清洗素材库。_';
+  }
+  const materialHtml = markdownToHtml(markdown);
+  let imageGallery = '';
+  try {
+    const imageIndex = JSON.parse(await fs.readFile(path.join(root, 'notes', note.id, 'sources', 'image-index.json'), 'utf8'));
+    const items = imageIndex
+      .filter((item) => item.local_file)
+      .map((item, index) => ({
+        src: item.local_file,
+        title: `课堂资料 ${String(index + 1).padStart(2, '0')}`,
+        caption: [item.action_time, item.source_name || '', item.ocr_char_count ? `OCR ${item.ocr_char_count} 字` : '']
+          .filter(Boolean)
+          .join(' · '),
+      }));
+    if (items.length) {
+      imageGallery = `<h2 id="课堂图片画廊">课堂图片画廊</h2>
+<div class="material-cluster">
+${items.map(renderMaterialFigure).join('\n')}
+</div>`;
+    }
+  } catch {
+    imageGallery = '';
+  }
+  const body = `${renderHeader('../../')}
+  <main id="top">
+    <section class="article-hero">
+      <div class="article-hero-copy">
+        <a class="back-link" href="index.html">返回本篇拆解</a>
+        <p class="meta">原始素材库 / ${escapeHtml(note.duration || '')}</p>
+        <h1>${escapeHtml(note.title)} · 素材库</h1>
+        <p class="lead">这里保留智能总结、逐句文字记录、课堂资料索引和 OCR 辅助结果；分析页是在这些素材之上做拆解和补充。</p>
+        <div class="actions">
+          <a class="button primary" href="index.html">看拆解分析</a>
+          <a class="button ghost" href="sources/normalized-materials.md">Markdown 素材</a>
+        </div>
+      </div>
+    </section>
+
+    <article class="content source-content">
+${imageGallery}
+${materialHtml}
+    </article>
+  </main>`;
+  const html = renderPageShell({
+    title: `${note.title} · 智能总结与逐字稿`,
+    description: '妙记智能总结、文字记录和课堂资料清洗版素材库。',
+    cssHref: '../../styles.css',
+    body,
+  });
+  await fs.writeFile(path.join(root, 'notes', note.id, 'materials.html'), html, 'utf8');
+}
+
+function renderAuditPage(notesData) {
+  const rows = notesData
+    .map((note) => {
+      const duplicateMark = notesData.filter((item) => item.sourceNoteId === note.sourceNoteId).length > 1 ? '疑似重复' : '唯一';
+      return `<tr>
+        <td>${escapeHtml(note.id)}</td>
+        <td>${escapeHtml(note.title)}</td>
+        <td>${escapeHtml(note.sourceNoteId || '')}</td>
+        <td>${escapeHtml(note.duration || '')}</td>
+        <td>${Number(note.summaryChars || 0).toLocaleString('zh-CN')}</td>
+        <td>${Number(note.transcriptSentences || 0).toLocaleString('zh-CN')}</td>
+        <td>${Number(note.classImages || 0).toLocaleString('zh-CN')}</td>
+        <td>${escapeHtml(duplicateMark)}</td>
+        <td><a href="notes/${note.id}/">拆解</a> / <a href="notes/${note.id}/materials.html">素材</a></td>
+      </tr>`;
+    })
+    .join('\n');
+
+  const body = `${renderHeader('')}
+  <main id="top">
+    <section class="article-hero">
+      <div class="article-hero-copy">
+        <a class="back-link" href="index.html">返回系列首页</a>
+        <p class="meta">5 个 GET 笔记 / 去重核对 / 素材完整性</p>
+        <h1>素材核对报告</h1>
+        <p class="lead">这页专门说明 5 个 URL 是否重复、每篇抓到了哪些智能总结、文字记录和课堂资料，以及还有哪些边界。</p>
+      </div>
+    </section>
+
+    <article class="content">
+      <h2>结论</h2>
+      <ul>
+        <li>5 个用户提供的 note_id 都已进入同一个 GitHub Pages 仓库。</li>
+        <li>当前没有发现内容重复：5 个页面的 note_id 不同，公开分享笔记的 source_note_id 也互不相同。</li>
+        <li>之前看起来“有一个重复/不完整”的原因，是第一篇老笔记还放在根目录素材结构里；现在已经迁移到 <code>notes/1912868579112712840/</code>，和另外 4 篇一致。</li>
+        <li>5 篇都提供独立拆解页和独立素材库页；拆解页按“术法道器势”分析，素材库页保留智能总结、逐字稿/文字记录、课堂资料索引。</li>
+        <li>课堂图片数量以接口实际返回为准：老笔记 9 张，商业预判 6 张，其余 3 篇分享接口未返回课堂图片文件。</li>
+      </ul>
+
+      <h2>逐篇核对表</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>用户 note_id</th>
+              <th>标题</th>
+              <th>源 note_id</th>
+              <th>时长</th>
+              <th>智能总结字符</th>
+              <th>文字记录句数</th>
+              <th>课堂图</th>
+              <th>重复判断</th>
+              <th>入口</th>
+            </tr>
+          </thead>
+          <tbody>
+${rows}
+          </tbody>
+        </table>
+      </div>
+
+      <h2>补全策略</h2>
+      <p>智能总结本身保留在素材库页，不再硬塞进拆解正文；拆解正文只做复盘、分析、补充模板和行动作业。这样既保留原始信息密度，又不会把阅读页变成流水账。</p>
+      <p>课堂资料只展示接口实际拿到的图片，不伪造不存在的资料。没有图片的三篇，素材库中会明确标注“分享接口未提供课堂图片文件”。</p>
+    </article>
+  </main>`;
+
+  return renderPageShell({
+    title: '素材核对报告 · 洋哥商业心法',
+    description: '5 个妙记 URL 的去重核对、素材完整性和补全说明。',
+    cssHref: 'styles.css',
+    body,
+  });
 }
 
 function renderHub(notesData) {
@@ -400,6 +535,7 @@ function renderHub(notesData) {
         <p class="lead">5 条妙记，5 个独立页面。<br>按“术法道器势”拆解，补上可执行模板。</p>
         <div class="actions">
           <a class="button primary" href="#notes">查看全部</a>
+          <a class="button ghost" href="audit.html">素材核对</a>
           <a class="button ghost" href="https://github.com/siuserxiaowei/yangge-business-mindset-pages" target="_blank" rel="noreferrer">GitHub 仓库</a>
         </div>
       </div>
@@ -436,8 +572,10 @@ async function main() {
     const hydrated = await readMeta(note);
     notesData.push(hydrated);
     await renderNotePage(hydrated);
+    await renderMaterialsPage(hydrated);
   }
   await fs.writeFile(path.join(root, 'index.html'), renderHub(notesData), 'utf8');
+  await fs.writeFile(path.join(root, 'audit.html'), renderAuditPage(notesData), 'utf8');
 }
 
 main().catch((error) => {

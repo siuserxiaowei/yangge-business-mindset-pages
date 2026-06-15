@@ -85,7 +85,7 @@ main {
   align-items: flex-end;
   overflow: hidden;
   border-radius: 8px;
-  background-image: url("assets/class-images/03-003_aJR6Tk-01.jpg");
+  background-image: url("notes/1912868579112712840/assets/class-images/03-003_aJR6Tk-01.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: var(--shadow);
@@ -308,6 +308,22 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: 0 14px 46px rgba(19, 29, 45, 0.06);
+}
+
+.source-content {
+  max-width: 960px;
+}
+
+.source-content h2 {
+  margin-top: 52px;
+}
+
+.source-content h3 {
+  color: var(--accent-ink);
+}
+
+.source-content pre {
+  white-space: pre-wrap;
 }
 
 .content h1 {

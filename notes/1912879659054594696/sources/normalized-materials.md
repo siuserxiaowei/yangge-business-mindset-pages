@@ -5,7 +5,7 @@ source_note_id: "1912587303852507704"
 title: "商业预判方法论与AI时代创业逻辑分享"
 source_url: "https://biji.ddmaster.com/note/1912879659054594696"
 share_url: "https://biji.ddmaster.com/note/share_note/rBzV4RYl342Q1"
-generated_at: "2026-06-15T07:35:03.529Z"
+generated_at: "2026-06-15T08:42:57.081Z"
 ---
 
 # 商业预判方法论与AI时代创业逻辑分享：清洗版素材库

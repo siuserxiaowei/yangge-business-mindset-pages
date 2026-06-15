@@ -374,22 +374,22 @@ OK，好，来，所以这里面所有的商业行为，你先问一句用户的
 
 | 时间 | 类型 | 本地文件 | OCR 字符数 |
 |---|---|---|---:|
-| 16:12 | 图片 | research/ddmaster-note-1912868579112712840/class-materials/images/01-001_WadRXb-01.jpg | 74 |
-| 20:42 | 图片 | research/ddmaster-note-1912868579112712840/class-materials/images/02-002_FPxXcR-01.jpg | 101 |
-| 25:00 | 图片 | research/ddmaster-note-1912868579112712840/class-materials/images/03-003_aJR6Tk-01.jpg | 47 |
-| 25:13 | 图片 | research/ddmaster-note-1912868579112712840/class-materials/images/04-004_N9x3aV-01.jpg | 363 |
-| 25:29 | 图片 | research/ddmaster-note-1912868579112712840/class-materials/images/05-005_ZB1Yt8-01.jpg | 183 |
-| 25:43 | 图片 | research/ddmaster-note-1912868579112712840/class-materials/images/06-006_hrgnBL-01.jpg | 68 |
-| 25:52 | 图片 | research/ddmaster-note-1912868579112712840/class-materials/images/07-007_IG4eG7-01.jpg | 96 |
-| 26:02 | 图片 | research/ddmaster-note-1912868579112712840/class-materials/images/08-008_2irXy8-01.jpg | 515 |
-| 26:10 | 图片 | research/ddmaster-note-1912868579112712840/class-materials/images/09-009_4YSOi6-01.jpg | 216 |
+| 16:12 | 图片 | assets/class-images/01-001_WadRXb-01.jpg | 74 |
+| 20:42 | 图片 | assets/class-images/02-002_FPxXcR-01.jpg | 101 |
+| 25:00 | 图片 | assets/class-images/03-003_aJR6Tk-01.jpg | 47 |
+| 25:13 | 图片 | assets/class-images/04-004_N9x3aV-01.jpg | 363 |
+| 25:29 | 图片 | assets/class-images/05-005_ZB1Yt8-01.jpg | 183 |
+| 25:43 | 图片 | assets/class-images/06-006_hrgnBL-01.jpg | 68 |
+| 25:52 | 图片 | assets/class-images/07-007_IG4eG7-01.jpg | 96 |
+| 26:02 | 图片 | assets/class-images/08-008_2irXy8-01.jpg | 515 |
+| 26:10 | 图片 | assets/class-images/09-009_4YSOi6-01.jpg | 216 |
 
 ### 3.3 OCR 结果（Tesseract，质量仅作辅助）
 
 #### 1. 16:12 001_WadRXb
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/01-001_WadRXb-01.jpg
-- OCR 文件：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/01-001_WadRXb-01.txt
+- 本地图片：assets/class-images/01-001_WadRXb-01.jpg
+- OCR 汇总：sources/ocr-combined.md
 
 ```text
 人一全
@@ -402,8 +402,8 @@ Ae Civebr Nase
 
 #### 2. 20:42 002_FPxXcR
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/02-002_FPxXcR-01.jpg
-- OCR 文件：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/02-002_FPxXcR-01.txt
+- 本地图片：assets/class-images/02-002_FPxXcR-01.jpg
+- OCR 汇总：sources/ocr-combined.md
 
 ```text
 PR lie t—“‘i‘“C™SCSC*‘*wC
@@ -415,8 +415,8 @@ let lai
 
 #### 3. 25:00 003_aJR6Tk
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/03-003_aJR6Tk-01.jpg
-- OCR 文件：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/03-003_aJR6Tk-01.txt
+- 本地图片：assets/class-images/03-003_aJR6Tk-01.jpg
+- OCR 汇总：sources/ocr-combined.md
 
 ```text
 AH BARA He Ruts | 7    |
@@ -426,8 +426,8 @@ TD iets
 
 #### 4. 25:13 004_N9x3aV
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/04-004_N9x3aV-01.jpg
-- OCR 文件：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/04-004_N9x3aV-01.txt
+- 本地图片：assets/class-images/04-004_N9x3aV-01.jpg
+- OCR 汇总：sources/ocr-combined.md
 
 ```text
 _ ton        “Ty
@@ -447,8 +447,8 @@ HEB MRPE: stor                   2 |       :
 
 #### 5. 25:29 005_ZB1Yt8
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/05-005_ZB1Yt8-01.jpg
-- OCR 文件：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/05-005_ZB1Yt8-01.txt
+- 本地图片：assets/class-images/05-005_ZB1Yt8-01.jpg
+- OCR 汇总：sources/ocr-combined.md
 
 ```text
 |   i
@@ -468,8 +468,8 @@ x            a3      成为全下最上用力的All者社                  下
 
 #### 6. 25:43 006_hrgnBL
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/06-006_hrgnBL-01.jpg
-- OCR 文件：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/06-006_hrgnBL-01.txt
+- 本地图片：assets/class-images/06-006_hrgnBL-01.jpg
+- OCR 汇总：sources/ocr-combined.md
 
 ```text
 WSS
@@ -483,8 +483,8 @@ mausontby tae 、
 
 #### 7. 25:52 007_IG4eG7
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/07-007_IG4eG7-01.jpg
-- OCR 文件：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/07-007_IG4eG7-01.txt
+- 本地图片：assets/class-images/07-007_IG4eG7-01.jpg
+- OCR 汇总：sources/ocr-combined.md
 
 ```text
 Jongg AINE S
@@ -497,8 +497,8 @@ ai)  EP RTES WA
 
 #### 8. 26:02 008_2irXy8
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/08-008_2irXy8-01.jpg
-- OCR 文件：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/08-008_2irXy8-01.txt
+- 本地图片：assets/class-images/08-008_2irXy8-01.jpg
+- OCR 汇总：sources/ocr-combined.md
 
 ```text
 HOM: RVC 5 oy BH AB        oe
@@ -519,8 +519,8 @@ AUD=IRERINE x REST x Senge foe
 
 #### 9. 26:10 009_4YSOi6
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/09-009_4YSOi6-01.jpg
-- OCR 文件：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/09-009_4YSOi6-01.txt
+- 本地图片：assets/class-images/09-009_4YSOi6-01.jpg
+- OCR 汇总：sources/ocr-combined.md
 
 ```text
 hy

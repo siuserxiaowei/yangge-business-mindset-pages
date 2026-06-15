@@ -5,7 +5,7 @@ source_note_id: "1912676453415202536"
 title: "基于SWOT分析与商业画布的AI创业赛道战略规划"
 source_url: "https://biji.ddmaster.com/note/1912879720258402952"
 share_url: "https://biji.ddmaster.com/note/share_note/XJzooyjMxmkP6"
-generated_at: "2026-06-15T07:35:04.795Z"
+generated_at: "2026-06-15T08:42:58.103Z"
 ---
 
 # 基于SWOT分析与商业画布的AI创业赛道战略规划：清洗版素材库

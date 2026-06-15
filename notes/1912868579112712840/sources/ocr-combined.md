@@ -6,8 +6,8 @@
 
 ## 1. 001_WadRXb @ 16:12
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/01-001_WadRXb-01.jpg
-- OCR 文本：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/01-001_WadRXb-01.txt
+- 本地图片：assets/class-images/01-001_WadRXb-01.jpg
+- OCR 文本：sources/ocr-text/01-001_WadRXb-01.txt
 
 ```text
 人一全
@@ -20,8 +20,8 @@ Ae Civebr Nase
 
 ## 2. 002_FPxXcR @ 20:42
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/02-002_FPxXcR-01.jpg
-- OCR 文本：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/02-002_FPxXcR-01.txt
+- 本地图片：assets/class-images/02-002_FPxXcR-01.jpg
+- OCR 文本：sources/ocr-text/02-002_FPxXcR-01.txt
 
 ```text
 PR lie t—“‘i‘“C™SCSC*‘*wC
@@ -33,8 +33,8 @@ let lai
 
 ## 3. 003_aJR6Tk @ 25:00
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/03-003_aJR6Tk-01.jpg
-- OCR 文本：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/03-003_aJR6Tk-01.txt
+- 本地图片：assets/class-images/03-003_aJR6Tk-01.jpg
+- OCR 文本：sources/ocr-text/03-003_aJR6Tk-01.txt
 
 ```text
 AH BARA He Ruts | 7    |
@@ -44,8 +44,8 @@ TD iets
 
 ## 4. 004_N9x3aV @ 25:13
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/04-004_N9x3aV-01.jpg
-- OCR 文本：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/04-004_N9x3aV-01.txt
+- 本地图片：assets/class-images/04-004_N9x3aV-01.jpg
+- OCR 文本：sources/ocr-text/04-004_N9x3aV-01.txt
 
 ```text
 _ ton        “Ty
@@ -65,8 +65,8 @@ HEB MRPE: stor                   2 |       :
 
 ## 5. 005_ZB1Yt8 @ 25:29
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/05-005_ZB1Yt8-01.jpg
-- OCR 文本：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/05-005_ZB1Yt8-01.txt
+- 本地图片：assets/class-images/05-005_ZB1Yt8-01.jpg
+- OCR 文本：sources/ocr-text/05-005_ZB1Yt8-01.txt
 
 ```text
 |   i
@@ -86,8 +86,8 @@ x            a3      成为全下最上用力的All者社                  下
 
 ## 6. 006_hrgnBL @ 25:43
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/06-006_hrgnBL-01.jpg
-- OCR 文本：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/06-006_hrgnBL-01.txt
+- 本地图片：assets/class-images/06-006_hrgnBL-01.jpg
+- OCR 文本：sources/ocr-text/06-006_hrgnBL-01.txt
 
 ```text
 WSS
@@ -101,8 +101,8 @@ mausontby tae 、
 
 ## 7. 007_IG4eG7 @ 25:52
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/07-007_IG4eG7-01.jpg
-- OCR 文本：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/07-007_IG4eG7-01.txt
+- 本地图片：assets/class-images/07-007_IG4eG7-01.jpg
+- OCR 文本：sources/ocr-text/07-007_IG4eG7-01.txt
 
 ```text
 Jongg AINE S
@@ -115,8 +115,8 @@ ai)  EP RTES WA
 
 ## 8. 008_2irXy8 @ 26:02
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/08-008_2irXy8-01.jpg
-- OCR 文本：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/08-008_2irXy8-01.txt
+- 本地图片：assets/class-images/08-008_2irXy8-01.jpg
+- OCR 文本：sources/ocr-text/08-008_2irXy8-01.txt
 
 ```text
 HOM: RVC 5 oy BH AB        oe
@@ -137,8 +137,8 @@ AUD=IRERINE x REST x Senge foe
 
 ## 9. 009_4YSOi6 @ 26:10
 
-- 本地图片：research/ddmaster-note-1912868579112712840/class-materials/images/09-009_4YSOi6-01.jpg
-- OCR 文本：research/ddmaster-note-1912868579112712840/class-materials/ocr-text/09-009_4YSOi6-01.txt
+- 本地图片：assets/class-images/09-009_4YSOi6-01.jpg
+- OCR 文本：sources/ocr-text/09-009_4YSOi6-01.txt
 
 ```text
 hy

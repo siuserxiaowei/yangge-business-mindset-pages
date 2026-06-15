@@ -2,7 +2,7 @@
 
 采集日期：2026-06-15
 来源 URL：https://biji.ddmaster.com/note/1912868579112712840
-目标仓库：https://github.com/siuserxiaowei/miaoji-decon
+目标仓库：https://github.com/siuserxiaowei/yangge-business-mindset-pages
 
 ## 当前结论
 
@@ -97,12 +97,12 @@ GET https://get-notes.luojilab.com/voicenotes/web/share/notes/191286857911271284
 
 本目录已落以下文件：
 
-- `raw-note-detail.json`：接口原始笔记详情，脱敏保存。
-- `raw-original.json`：文字记录/课堂资料原始结构，脱敏保存。
 - `normalized-materials.md`：把智能总结、文字记录、课堂资料拆成可读 Markdown。
-- `class-materials/images/`：课堂图片本地副本。
-- `class-materials/ocr-combined.md`：课堂图片 OCR 辅助结果。
-- `2026-06-15-洋哥商业心法-术法道器势拆解.md`：最终“术法道器势”学习复盘。
+- `assets/class-images/`：课堂图片本地副本。
+- `ocr-combined.md`：课堂图片 OCR 辅助结果。
+- `../analysis.md`：最终“术法道器势”学习复盘。
+
+说明：登录态接口返回的原始 JSON 只用于本次抽取和校验；公开仓库保留清洗后的素材、课堂图片和来源审计，不保留任何浏览器 token、refresh token、device id 或媒体签名 URL。
 
 最终复盘应遵循本仓库 `skills/miaoji-decon/SKILL.md` 的结构，不写流水账，重点回答：
 

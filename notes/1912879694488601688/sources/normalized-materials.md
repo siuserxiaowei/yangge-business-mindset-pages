@@ -5,7 +5,7 @@ source_note_id: "1912601668372592768"
 title: "商业创业能力打造：第一性原理的应用方法分享"
 source_url: "https://biji.ddmaster.com/note/1912879694488601688"
 share_url: "https://biji.ddmaster.com/note/share_note/7gvWao4XZkzLL"
-generated_at: "2026-06-15T07:35:04.136Z"
+generated_at: "2026-06-15T08:42:57.500Z"
 ---
 
 # 商业创业能力打造：第一性原理的应用方法分享：清洗版素材库

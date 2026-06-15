@@ -7,17 +7,18 @@
 ## 在线页面
 
 - 系列首页：https://siuserxiaowei.github.io/yangge-business-mindset-pages/
+- 素材核对报告：https://siuserxiaowei.github.io/yangge-business-mindset-pages/audit.html
 - GitHub 仓库：https://github.com/siuserxiaowei/yangge-business-mindset-pages
 
 ## 页面目录
 
-| 页面 | 在线链接 | 主要内容 |
-|---|---|---|
-| 商业心法总纲 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912868579112712840/ | AI 创业、商业增长、IP、流量、长期主义和「术法道器势」总框架 |
-| 商业预判 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879659054594696/ | 创业预判、赛道筛选、终局图谱、P 型/L 型创业者、AI 时代培训行业变化 |
-| 第一性原理 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879694488601688/ | 战略取舍、系统拆解、质疑默认路径、单变量优化和 AI 自动化判断 |
-| MVP 验证 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879709520320784/ | 最小可行产品、低成本试错、关键假设验证、实验卡和验证流程 |
-| SWOT 与商业画布 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879720258402952/ | SWOT、商业画布、AI 创业赛道战略、客户细分、价值主张和收益闭环 |
+| 页面 | 拆解页 | 素材库页 | 主要内容 |
+|---|---|---|---|
+| 商业心法总纲 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912868579112712840/ | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912868579112712840/materials.html | AI 创业、商业增长、IP、流量、长期主义和「术法道器势」总框架 |
+| 商业预判 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879659054594696/ | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879659054594696/materials.html | 创业预判、赛道筛选、终局图谱、P 型/L 型创业者、AI 时代培训行业变化 |
+| 第一性原理 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879694488601688/ | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879694488601688/materials.html | 战略取舍、系统拆解、质疑默认路径、单变量优化和 AI 自动化判断 |
+| MVP 验证 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879709520320784/ | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879709520320784/materials.html | 最小可行产品、低成本试错、关键假设验证、实验卡和验证流程 |
+| SWOT 与商业画布 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879720258402952/ | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879720258402952/materials.html | SWOT、商业画布、AI 创业赛道战略、客户细分、价值主张和收益闭环 |
 
 ## 拆解框架
 
@@ -41,13 +42,11 @@
 ```text
 .
 ├── index.html
-├── analysis.md
+├── audit.html
 ├── styles.css
 ├── scripts/
 │   ├── build-site.mjs
 │   └── fetch-ddmaster-share-notes.mjs
-├── assets/
-│   └── class-images/
 ├── notes/
 │   ├── 1912868579112712840/
 │   ├── 1912879659054594696/
@@ -61,9 +60,10 @@
 
 - `analysis.md`：该篇完整拆解原稿。
 - `index.html`：GitHub Pages 页面。
+- `materials.html`：智能总结、文字记录、课堂资料的在线素材库页面。
 - `meta.json`：标题、来源链接、分享链接、时长等元数据。
 - `sources/normalized-materials.md`：清洗后的智能总结、文字记录和课堂资料索引。
-- `sources/raw/`：经过媒体链接脱敏后的原始分享接口数据。
+- `sources/raw/`：如果是公开分享页，会保存经过媒体链接脱敏后的原始分享接口数据。
 - `assets/class-images/`：该篇可获取的课堂图片。
 
 ## 维护方式
