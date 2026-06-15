@@ -1,48 +1,120 @@
 # 洋哥商业心法 · 术法道器势系列拆解
 
-这是一个 GitHub Pages 静态站点，用来承载「洋哥商业心法」系列妙记内容的结构化拆解。
+这是一个用于长期保存和学习「洋哥商业心法」系列 GET/妙记笔记的 GitHub Pages 静态仓库。
 
-项目把妙记里的智能总结、文字记录、课堂资料和补充分析统一整理到 GitHub Pages。每篇拆解正文先按「术 / 法 / 道 / 器 / 势」分析，底部再直接嵌入智能总结、逐字稿/文字记录、课堂资料；独立素材库页用于快速核对原始材料。
+仓库把 5 篇 GET 笔记中的智能总结、会议纪要、逐字稿/文字记录、课堂资料图片和补充拆解统一整理为可在线阅读的学习站点。每篇内容都按「术 / 法 / 道 / 器 / 势」重新拆解，并保留原始素材备份，避免原笔记后续关闭分享后无法查看。
 
-## 在线页面
+## 这个仓库是干嘛的
 
-- 系列首页：https://siuserxiaowei.github.io/yangge-business-mindset-pages/
-- 素材核对报告：https://siuserxiaowei.github.io/yangge-business-mindset-pages/audit.html
-- GET 笔记原文备份：https://siuserxiaowei.github.io/yangge-business-mindset-pages/archive.html
-- GitHub 仓库：https://github.com/siuserxiaowei/yangge-business-mindset-pages
+这个仓库有三个目标：
 
-## 页面目录
+1. **保存原始资料**：把 GET 笔记中的智能总结、会议纪要、文字记录、课堂资料图片和 OCR 文本保存到自己的 GitHub 仓库。
+2. **做结构化学习**：不只是存素材，而是把课程内容拆成「术法道器势」框架，方便复盘、迁移到自己的业务里。
+3. **生成在线页面**：通过 GitHub Pages 把所有内容变成可直接打开的网页，不依赖原 GET 笔记链接是否继续公开。
 
-| 页面 | 拆解页 | 素材库页 | 主要内容 |
-|---|---|---|---|
-| 商业心法总纲 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912868579112712840/ | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912868579112712840/materials.html | AI 创业、商业增长、IP、流量、长期主义和「术法道器势」总框架 |
-| 商业预判 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879659054594696/ | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879659054594696/materials.html | 创业预判、赛道筛选、终局图谱、P 型/L 型创业者、AI 时代培训行业变化 |
-| 第一性原理 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879694488601688/ | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879694488601688/materials.html | 战略取舍、系统拆解、质疑默认路径、单变量优化和 AI 自动化判断 |
-| MVP 验证 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879709520320784/ | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879709520320784/materials.html | 最小可行产品、低成本试错、关键假设验证、实验卡和验证流程 |
-| SWOT 与商业画布 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879720258402952/ | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879720258402952/materials.html | SWOT、商业画布、AI 创业赛道战略、客户细分、价值主张和收益闭环 |
+适合三类人使用：
 
-## 拆解框架
+- 想系统学习洋哥商业心法、AI 创业、商业预判、MVP、SWOT 和商业画布的人。
+- 想复盘课程内容，不想只看零散逐字稿的人。
+- 想参考一个「会议纪要/课堂资料 → 结构化拆解 → 静态站点备份」工作流的人。
 
-每篇文章都按同一套结构处理：
+## 在线入口
 
-- `术`：可以马上执行的动作，例如访谈、调研、预售、评分、单变量测试。
-- `法`：可复用的方法论，例如商业预判五步法、第一性原理六步、MVP 实验流程。
-- `道`：底层判断标准，例如长期整体最优、证据优先、低成本验证、先终局后当下。
-- `器`：工具、模板和资源，例如访谈表、SWOT 表、商业画布、实验卡、AI 工作流。
-- `势`：外部趋势和时机，例如 AI 降低执行成本、技能培训供给过剩、IP 与信任变稀缺。
+| 入口 | 链接 | 用途 |
+|---|---|---|
+| 系列首页 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/ | 5 篇拆解的统一入口 |
+| 素材核对报告 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/audit.html | 核对 5 个笔记是否重复、每篇抓到了哪些素材 |
+| GET 笔记原文备份 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/archive.html | 一页式离线备份，集中保存 5 篇智能总结、会议纪要、逐字稿和课堂资料 |
+| GitHub 仓库 | https://github.com/siuserxiaowei/yangge-business-mindset-pages | 源文件、脚本、图片和 Markdown 原稿 |
 
-## 素材边界
+## 推荐学习顺序
 
-- 本仓库内容来自妙记分享页、智能总结、文字记录和可获取的课堂图片。
-- `archive.html` 是一页式离线备份：把 5 篇已获取的智能总结、会议纪要、逐字稿/文字记录、课堂资料直接写入 GitHub Pages，不依赖原 GET 笔记是否继续公开。
-- `1912879659054594696` 这篇接口返回了 6 张课堂图片，已全部插入文章正文。
-- 另外三篇新增内容的分享接口没有返回课堂图片，因此页面只基于智能总结和文字记录整理。
-- 课程中涉及的 ROI、增长速度、分润比例等数字属于讲者现场口径，本仓库只做课程逻辑拆解，没有做外部独立核验。
+如果你是第一次进入这个仓库，建议按这个顺序学习：
+
+1. **先看系列首页**
+
+   打开首页，先了解 5 篇内容分别讲什么，不要直接钻进逐字稿。
+
+2. **看素材核对报告**
+
+   先确认每篇素材边界：哪些有课堂图片，哪些只有智能总结和文字记录，避免把没有抓到的资料误以为课程没有讲。
+
+3. **按主题读拆解页**
+
+   每篇拆解页前半部分是「术法道器势」分析，适合学习和复盘；页面底部是原始素材附录，适合回查依据。
+
+4. **需要原文时看离线备份页**
+
+   `archive.html` 把 5 篇 GET 笔记原文素材集中放在一个页面。以后原作者不公开 GET 笔记，也可以从这里看已经保存下来的内容。
+
+5. **最后回到自己的业务做作业**
+
+   每篇拆解里都有可执行模板、问题清单或 7 天作业。真正有价值的不是收藏，而是拿其中一个动作去验证。
+
+## 五篇内容地图
+
+| 序号 | 主题 | 拆解页 | 素材页 | 学习重点 |
+|---|---|---|---|---|
+| 01 | 商业心法总纲 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912868579112712840/ | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912868579112712840/materials.html | AI 创业、商业增长、IP、流量、长期主义和「术法道器势」总框架 |
+| 02 | 商业预判 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879659054594696/ | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879659054594696/materials.html | 创业预判、赛道筛选、终局图谱、P 型/L 型创业者、AI 时代培训行业变化 |
+| 03 | 第一性原理 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879694488601688/ | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879694488601688/materials.html | 战略取舍、系统拆解、质疑默认路径、单变量优化和 AI 自动化判断 |
+| 04 | MVP 验证 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879709520320784/ | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879709520320784/materials.html | 最小可行产品、低成本试错、关键假设验证、实验卡和验证流程 |
+| 05 | SWOT 与商业画布 | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879720258402952/ | https://siuserxiaowei.github.io/yangge-business-mindset-pages/notes/1912879720258402952/materials.html | SWOT、商业画布、AI 创业赛道战略、客户细分、价值主张和收益闭环 |
+
+## 「术法道器势」怎么读
+
+每篇文章都按同一套框架拆解：
+
+- `术`：马上能做的动作，比如访谈、调研、预售、评分、单变量测试。
+- `法`：可以复用的方法论，比如商业预判五步法、第一性原理六步、MVP 实验流程。
+- `道`：底层判断标准，比如长期整体最优、证据优先、低成本验证、先终局后当下。
+- `器`：工具、模板和资源，比如访谈表、SWOT 表、商业画布、实验卡、AI 工作流。
+- `势`：外部趋势和时机，比如 AI 降低执行成本、技能培训供给过剩、IP 与信任变稀缺。
+
+简单理解：
+
+- `术` 解决「现在具体做什么」。
+- `法` 解决「这类问题以后怎么重复解决」。
+- `道` 解决「为什么这样判断是对的」。
+- `器` 解决「用什么工具和模板落地」。
+- `势` 解决「为什么现在值得做、不能逆着什么趋势做」。
+
+## 怎么克隆这个仓库
+
+你可以直接克隆到本地阅读、备份或二次修改：
+
+```bash
+git clone https://github.com/siuserxiaowei/yangge-business-mindset-pages.git
+cd yangge-business-mindset-pages
+```
+
+这个项目是纯静态页面，不需要安装 npm 依赖就能预览。
+
+本地启动一个静态服务：
+
+```bash
+python3 -m http.server 8020
+```
+
+然后打开：
+
+```text
+http://localhost:8020/
+```
+
+常用页面：
+
+```text
+http://localhost:8020/index.html
+http://localhost:8020/audit.html
+http://localhost:8020/archive.html
+```
 
 ## 仓库结构
 
 ```text
 .
+├── README.md
 ├── index.html
 ├── audit.html
 ├── archive.html
@@ -55,69 +127,171 @@
 │   ├── 1912879659054594696/
 │   ├── 1912879694488601688/
 │   ├── 1912879709520320784/
-│   └── 1912879720258402952/
+│   ├── 1912879720258402952/
+│   └── share-fetch-summary.json
 └── sources/
 ```
 
-每个 `notes/{id}/` 目录通常包含：
+核心文件说明：
 
-- `analysis.md`：该篇完整拆解原稿。
-- `index.html`：GitHub Pages 拆解页面，底部直接嵌入智能总结、文字记录和课堂资料。
-- `materials.html`：同一份智能总结、文字记录、课堂资料的独立在线素材库页面。
-- `meta.json`：标题、来源链接、分享链接、时长等元数据。
-- `sources/normalized-materials.md`：清洗后的智能总结、文字记录和课堂资料索引。
-- `sources/raw/`：如果是公开分享页，会保存经过媒体链接脱敏后的原始分享接口数据。
-- `assets/class-images/`：该篇可获取的课堂图片。
+| 路径 | 作用 |
+|---|---|
+| `README.md` | 仓库说明，新访客先看这里 |
+| `index.html` | GitHub Pages 首页 |
+| `audit.html` | 5 篇素材的去重和完整性核对 |
+| `archive.html` | 5 篇 GET 笔记原文素材的一页式静态备份 |
+| `styles.css` | 全站样式 |
+| `scripts/build-site.mjs` | 根据 Markdown 和素材重新生成 HTML 页面 |
+| `scripts/fetch-ddmaster-share-notes.mjs` | 抓取公开分享 GET 笔记素材的脚本 |
+| `notes/{id}/analysis.md` | 单篇结构化拆解原稿 |
+| `notes/{id}/index.html` | 单篇在线拆解页面 |
+| `notes/{id}/materials.html` | 单篇原始素材库页面 |
+| `notes/{id}/meta.json` | 标题、来源、时长、素材数量等元数据 |
+| `notes/{id}/sources/normalized-materials.md` | 清洗后的智能总结、会议纪要、文字记录和课堂资料索引 |
+| `notes/{id}/sources/raw/` | 公开分享页接口返回的脱敏原始 JSON |
+| `notes/{id}/assets/class-images/` | 课堂资料图片 |
 
-## 维护方式
+## 单篇笔记目录说明
 
-重新抓取分享页素材：
+每个 `notes/{id}/` 目录通常长这样：
 
-```bash
-node scripts/fetch-ddmaster-share-notes.mjs
+```text
+notes/1912879659054594696/
+├── analysis.md
+├── index.html
+├── materials.html
+├── meta.json
+├── assets/
+│   └── class-images/
+└── sources/
+    ├── normalized-materials.md
+    ├── image-index.json
+    ├── ocr-results.json
+    ├── ocr-text/
+    └── raw/
 ```
 
-重新生成静态页面：
+阅读时看：
+
+- 想学习：看 `index.html` 或线上拆解页。
+- 想核对原文：看 `materials.html` 或 `sources/normalized-materials.md`。
+- 想确认抓取状态：看 `meta.json` 和 `image-index.json`。
+- 想长期备份：看根目录 `archive.html`。
+
+## 怎么重新生成页面
+
+如果你修改了 `analysis.md`、`normalized-materials.md`、`meta.json` 或构建脚本，需要重新生成 HTML：
 
 ```bash
 node scripts/build-site.mjs
 ```
 
-本地预览：
+生成后建议检查：
 
 ```bash
 python3 -m http.server 8020
 ```
 
-然后访问：
+打开本地页面确认：
 
 ```text
 http://localhost:8020/
+http://localhost:8020/archive.html
 ```
 
-## 部署方式
+## 怎么重新抓取公开 GET 笔记
+
+公开分享页素材可以用脚本重新抓取：
+
+```bash
+node scripts/fetch-ddmaster-share-notes.mjs
+```
+
+注意：
+
+- 脚本只适合公开分享页。
+- 已经失效、私有、需要登录权限的 GET 笔记，不能靠静态页面抓取。
+- 私有笔记如果要完整备份，需要拥有者导出或提供可访问权限。
+- 不要把登录 token、cookie、签名 URL 等敏感凭据提交到仓库。
+
+## 怎么发布到 GitHub Pages
 
 本仓库使用 GitHub Pages，从 `main` 分支根目录直接部署。
 
-发布流程：
+常规发布流程：
 
 ```bash
 node scripts/build-site.mjs
-git add README.md index.html styles.css scripts notes
-git commit -m "Update site documentation"
+git status -sb
+git add README.md index.html audit.html archive.html styles.css scripts notes
+git commit -m "Update documentation and pages"
 git push origin main
 ```
 
-GitHub Pages 部署完成后，线上入口为：
+推送后 GitHub Pages 会自动部署。部署完成后访问：
 
 ```text
 https://siuserxiaowei.github.io/yangge-business-mindset-pages/
 ```
 
-## 最近更新
+## 素材来源与边界
 
-- 新增 4 篇妙记拆解页面。
-- 首页改成系列入口页。
-- 课堂资料从单独素材区改为插入正文。
-- 调整引用、加粗和移动端阅读排版。
-- 补充 README 的仓库说明、页面目录、素材边界和维护方式。
+这个仓库保存的是已经能合法访问到的课程笔记素材，主要包括：
+
+- GET/妙记智能总结
+- 会议纪要/课堂实录
+- 逐字稿/文字记录
+- 课堂资料图片
+- 图片 OCR 辅助文本
+- 基于以上素材做的「术法道器势」补充拆解
+
+当前素材边界：
+
+- `1912868579112712840`：智能总结、文字记录、9 张课堂图片。
+- `1912879659054594696`：智能总结、文字记录、6 张课堂图片。
+- `1912879694488601688`：智能总结、文字记录，分享接口未返回课堂图片。
+- `1912879709520320784`：智能总结、文字记录，分享接口未返回课堂图片。
+- `1912879720258402952`：智能总结、文字记录，分享接口未返回课堂图片。
+
+课程中涉及 ROI、增长速度、分润比例、市场规模等数字，属于讲者现场口径。本仓库只做课程逻辑拆解和学习整理，没有对所有商业数字做外部独立核验。
+
+## 常见问题
+
+### 原 GET 笔记以后不公开了怎么办？
+
+看 `archive.html`。这个页面已经把 5 篇已获取的智能总结、会议纪要、逐字稿/文字记录和课堂资料写进本站 HTML，不依赖原分享链接继续有效。
+
+### 我应该看拆解页还是素材页？
+
+学习优先看拆解页：`notes/{id}/index.html`。
+
+核对原文优先看素材页：`notes/{id}/materials.html`。
+
+想一次性备份和搜索 5 篇原文素材，看 `archive.html`。
+
+### 这个项目需要构建工具吗？
+
+日常阅读不需要。它是静态 HTML/CSS。
+
+只有在修改 Markdown、素材或页面结构后，才需要执行：
+
+```bash
+node scripts/build-site.mjs
+```
+
+### 为什么有些笔记没有课堂图片？
+
+因为分享接口没有返回课堂图片文件。仓库不会伪造不存在的课堂资料，只展示实际获取到的内容。
+
+### 可以直接复制这个仓库做自己的课程备份吗？
+
+可以参考结构和脚本，但要注意内容版权、访问权限和隐私安全。不要把他人的私有资料、登录凭据或未脱敏接口数据公开提交。
+
+## 更新记录
+
+- 统一 5 篇 GET/妙记笔记为一个 GitHub Pages 站点。
+- 增加每篇独立拆解页和独立素材页。
+- 增加 `audit.html`，用于核对素材完整性和重复情况。
+- 增加 `archive.html`，用于保存 5 篇 GET 笔记原文素材的一页式离线备份。
+- 优化引用、加粗、课堂图片和移动端阅读排版。
+- 补充仓库说明、学习路径、克隆方式、本地预览、重新生成和部署流程。
