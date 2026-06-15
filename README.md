@@ -8,6 +8,7 @@
 
 - 系列首页：https://siuserxiaowei.github.io/yangge-business-mindset-pages/
 - 素材核对报告：https://siuserxiaowei.github.io/yangge-business-mindset-pages/audit.html
+- GET 笔记原文备份：https://siuserxiaowei.github.io/yangge-business-mindset-pages/archive.html
 - GitHub 仓库：https://github.com/siuserxiaowei/yangge-business-mindset-pages
 
 ## 页面目录
@@ -33,6 +34,7 @@
 ## 素材边界
 
 - 本仓库内容来自妙记分享页、智能总结、文字记录和可获取的课堂图片。
+- `archive.html` 是一页式离线备份：把 5 篇已获取的智能总结、会议纪要、逐字稿/文字记录、课堂资料直接写入 GitHub Pages，不依赖原 GET 笔记是否继续公开。
 - `1912879659054594696` 这篇接口返回了 6 张课堂图片，已全部插入文章正文。
 - 另外三篇新增内容的分享接口没有返回课堂图片，因此页面只基于智能总结和文字记录整理。
 - 课程中涉及的 ROI、增长速度、分润比例等数字属于讲者现场口径，本仓库只做课程逻辑拆解，没有做外部独立核验。
@@ -43,6 +45,7 @@
 .
 ├── index.html
 ├── audit.html
+├── archive.html
 ├── styles.css
 ├── scripts/
 │   ├── build-site.mjs

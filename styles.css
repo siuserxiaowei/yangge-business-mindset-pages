@@ -336,6 +336,96 @@ h1 {
   border-top: 2px solid var(--accent);
 }
 
+.archive-content {
+  max-width: 1020px;
+}
+
+.archive-toc {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 10px;
+  margin: 18px 0 34px;
+}
+
+.archive-toc-item {
+  display: grid;
+  gap: 5px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfe;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.archive-toc-item:hover {
+  border-color: var(--line-strong);
+}
+
+.archive-toc-item span {
+  color: var(--warm);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.archive-toc-item small {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.archive-note {
+  margin-top: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.archive-note summary {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 4px 12px;
+  align-items: center;
+  cursor: pointer;
+  padding: 18px 20px;
+  background: #f7f8fa;
+}
+
+.archive-note summary span {
+  grid-row: span 2;
+  color: var(--warm);
+  font-weight: 850;
+}
+
+.archive-note summary strong {
+  background: none;
+}
+
+.archive-note summary small {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.archive-note-body {
+  padding: 6px clamp(18px, 4vw, 38px) 34px;
+}
+
+.archive-note-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 22px 0 8px;
+}
+
+.archive-note-meta a {
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--accent-ink);
+  text-decoration: none;
+  font-size: 14px;
+}
+
 .content h1 {
   font-size: clamp(34px, 5vw, 52px);
   line-height: 1.12;

@@ -314,13 +314,13 @@ async function readMeta(note) {
   };
 }
 
-async function renderImageGallery(note) {
+async function renderImageGallery(note, assetPrefix = '') {
   try {
     const imageIndex = JSON.parse(await fs.readFile(path.join(root, 'notes', note.id, 'sources', 'image-index.json'), 'utf8'));
     const items = imageIndex
       .filter((item) => item.local_file)
       .map((item, index) => ({
-        src: item.local_file,
+        src: `${assetPrefix}${item.local_file}`,
         title: `课堂资料 ${String(index + 1).padStart(2, '0')}`,
         caption: [item.action_time, item.source_name || '', item.ocr_char_count ? `OCR ${item.ocr_char_count} 字` : '']
           .filter(Boolean)
@@ -378,6 +378,7 @@ function renderHeader(prefix = '') {
         <a href="${prefix}index.html#notes">全部拆解</a>
         <a href="${prefix}index.html#framework">总框架</a>
         <a href="${prefix}audit.html">素材核对</a>
+        <a href="${prefix}archive.html">离线备份</a>
         <a href="${prefix}README.md">仓库说明</a>
       </div>
     </nav>
@@ -486,6 +487,9 @@ function renderAuditPage(notesData) {
         <p class="meta">5 个 GET 笔记 / 去重核对 / 素材完整性</p>
         <h1>素材核对报告</h1>
         <p class="lead">这页专门说明 5 个 URL 是否重复、每篇抓到了哪些智能总结、文字记录和课堂资料，以及还有哪些边界。</p>
+        <div class="actions">
+          <a class="button primary" href="archive.html">打开离线备份</a>
+        </div>
       </div>
     </section>
 
@@ -535,6 +539,86 @@ ${rows}
   });
 }
 
+async function renderArchivePage(notesData) {
+  const toc = notesData
+    .map(
+      (note, index) => `<a class="archive-toc-item" href="#note-${note.id}">
+        <span>${String(index + 1).padStart(2, '0')}</span>
+        <strong>${escapeHtml(note.shortTitle || note.title)}</strong>
+        <small>${escapeHtml(note.duration || '')} · 智能总结 ${Number(note.summaryChars || 0).toLocaleString('zh-CN')} 字 · 文字记录 ${Number(note.transcriptSentences || 0).toLocaleString('zh-CN')} 段</small>
+      </a>`,
+    )
+    .join('\n');
+
+  const sections = [];
+  for (const [index, note] of notesData.entries()) {
+    let markdown = '';
+    try {
+      markdown = await fs.readFile(note.materialsPath, 'utf8');
+    } catch {
+      markdown = '# 素材库\n\n_当前笔记没有清洗素材库。_';
+    }
+    const imageGallery = await renderImageGallery(note, `notes/${note.id}/`);
+    const materialHtml = markdownToHtml(markdown);
+    sections.push(`<details class="archive-note" id="note-${note.id}" open>
+  <summary>
+    <span>${String(index + 1).padStart(2, '0')}</span>
+    <strong>${escapeHtml(note.title)}</strong>
+    <small>${escapeHtml(note.duration || '')} · ${escapeHtml(note.id)}</small>
+  </summary>
+  <div class="archive-note-body">
+    <div class="archive-note-meta">
+      <a href="notes/${note.id}/">拆解页</a>
+      <a href="notes/${note.id}/materials.html">独立素材页</a>
+      <a href="notes/${note.id}/sources/normalized-materials.md">Markdown 素材</a>
+    </div>
+${imageGallery}
+${materialHtml}
+  </div>
+</details>`);
+  }
+
+  const body = `${renderHeader('')}
+  <main id="top">
+    <section class="article-hero">
+      <div class="article-hero-copy">
+        <a class="back-link" href="index.html">返回系列首页</a>
+        <p class="meta">GET 笔记 / 会议纪要 / 静态备份</p>
+        <h1>GET 笔记原文备份</h1>
+        <p class="lead">这里把 5 篇已获取的智能总结、会议纪要、逐字稿/文字记录、课堂资料全部写进本站 HTML。即使原作者后续关闭分享，本页仍可从自己的 GitHub Pages 读取。</p>
+        <div class="actions">
+          <a class="button primary" href="#archive-list">查看备份内容</a>
+          <a class="button ghost" href="audit.html">素材核对</a>
+        </div>
+      </div>
+    </section>
+
+    <article class="content source-content archive-content" id="archive-list">
+      <h2>备份范围</h2>
+      <ul>
+        <li>本页内容来自仓库内 <code>notes/{id}/sources/normalized-materials.md</code> 与课堂图片文件，页面渲染不再请求原 GET 笔记地址。</li>
+        <li>备份内容包括：智能总结、课堂实录/会议纪要、重点速览、待办事项、逐句文字记录、课堂资料索引与 OCR 辅助文本。</li>
+        <li>课堂图片只备份接口实际返回的文件：<code>1912868579112712840</code> 为 9 张，<code>1912879659054594696</code> 为 6 张，其余 3 篇接口未返回图片。</li>
+      </ul>
+
+      <h2>目录</h2>
+      <div class="archive-toc">
+${toc}
+      </div>
+
+      <h2>完整备份正文</h2>
+${sections.join('\n')}
+    </article>
+  </main>`;
+
+  return renderPageShell({
+    title: 'GET 笔记原文备份 · 洋哥商业心法',
+    description: '5 篇 GET 笔记的智能总结、会议纪要、文字记录和课堂资料静态备份。',
+    cssHref: 'styles.css',
+    body,
+  });
+}
+
 function renderHub(notesData) {
   const cards = notesData
     .map(
@@ -558,6 +642,7 @@ function renderHub(notesData) {
         <div class="actions">
           <a class="button primary" href="#notes">查看全部</a>
           <a class="button ghost" href="audit.html">素材核对</a>
+          <a class="button ghost" href="archive.html">离线备份</a>
           <a class="button ghost" href="https://github.com/siuserxiaowei/yangge-business-mindset-pages" target="_blank" rel="noreferrer">GitHub 仓库</a>
         </div>
       </div>
@@ -598,6 +683,7 @@ async function main() {
   }
   await fs.writeFile(path.join(root, 'index.html'), renderHub(notesData), 'utf8');
   await fs.writeFile(path.join(root, 'audit.html'), renderAuditPage(notesData), 'utf8');
+  await fs.writeFile(path.join(root, 'archive.html'), await renderArchivePage(notesData), 'utf8');
 }
 
 main().catch((error) => {
