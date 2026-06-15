@@ -326,6 +326,16 @@ h1 {
   white-space: pre-wrap;
 }
 
+.source-appendix {
+  margin-top: 72px;
+  padding-top: 10px;
+}
+
+.source-appendix > h2:first-child {
+  margin-top: 0;
+  border-top: 2px solid var(--accent);
+}
+
 .content h1 {
   font-size: clamp(34px, 5vw, 52px);
   line-height: 1.12;

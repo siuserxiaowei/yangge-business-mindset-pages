@@ -314,6 +314,45 @@ async function readMeta(note) {
   };
 }
 
+async function renderImageGallery(note) {
+  try {
+    const imageIndex = JSON.parse(await fs.readFile(path.join(root, 'notes', note.id, 'sources', 'image-index.json'), 'utf8'));
+    const items = imageIndex
+      .filter((item) => item.local_file)
+      .map((item, index) => ({
+        src: item.local_file,
+        title: `课堂资料 ${String(index + 1).padStart(2, '0')}`,
+        caption: [item.action_time, item.source_name || '', item.ocr_char_count ? `OCR ${item.ocr_char_count} 字` : '']
+          .filter(Boolean)
+          .join(' · '),
+      }));
+    if (!items.length) return '';
+    return `<h2 id="课堂图片画廊">课堂图片画廊</h2>
+<div class="material-cluster">
+${items.map(renderMaterialFigure).join('\n')}
+</div>`;
+  } catch {
+    return '';
+  }
+}
+
+async function renderSourceAppendix(note) {
+  let markdown = '';
+  try {
+    markdown = await fs.readFile(note.materialsPath, 'utf8');
+  } catch {
+    markdown = '# 素材库\n\n_当前笔记没有清洗素材库。_';
+  }
+  const imageGallery = await renderImageGallery(note);
+  const materialHtml = markdownToHtml(markdown);
+  return `<section class="source-appendix source-content" id="materials-appendix">
+<h2>素材附录：智能总结 / 逐字稿 / 课堂资料</h2>
+<p>下面是本篇拆解依托的原始素材，已经直接插入到文章内。独立素材页保留同一份内容，方便单独核对。</p>
+${imageGallery}
+${materialHtml}
+</section>`;
+}
+
 function renderPageShell({ title, description, cssHref, body }) {
   return `<!doctype html>
 <html lang="zh-CN">
@@ -348,6 +387,7 @@ function renderHeader(prefix = '') {
 async function renderNotePage(note) {
   const markdown = await fs.readFile(note.markdownPath, 'utf8');
   const articleHtml = markdownToHtml(markdown, note.materials || new Map());
+  const sourceAppendixHtml = await renderSourceAppendix(note);
   const imageStyle = note.heroImage ? ` style="--hero-image: url('${note.heroImage}')"` : '';
   const body = `${renderHeader('../../')}
   <main id="top">
@@ -359,7 +399,8 @@ async function renderNotePage(note) {
         <p class="lead">${escapeHtml(note.subtitle || '基于智能总结、文字记录和课堂资料重新拆解。')}</p>
         <div class="actions">
           <a class="button primary" href="#1-如果只读-10-分钟">开始阅读</a>
-          <a class="button ghost" href="${note.materialsHref}">智能总结 / 逐字稿 / 课堂资料</a>
+          <a class="button ghost" href="#materials-appendix">智能总结 / 逐字稿 / 课堂资料</a>
+          <a class="button ghost" href="${note.materialsHref}">独立素材页</a>
           <a class="button ghost" href="${note.markdownHref}">Markdown 原稿</a>
         </div>
       </div>
@@ -367,6 +408,7 @@ async function renderNotePage(note) {
 
     <article class="content">
 ${articleHtml}
+${sourceAppendixHtml}
     </article>
   </main>`;
   const html = renderPageShell({
@@ -388,27 +430,7 @@ async function renderMaterialsPage(note) {
     markdown = '# 素材库\n\n_当前笔记没有清洗素材库。_';
   }
   const materialHtml = markdownToHtml(markdown);
-  let imageGallery = '';
-  try {
-    const imageIndex = JSON.parse(await fs.readFile(path.join(root, 'notes', note.id, 'sources', 'image-index.json'), 'utf8'));
-    const items = imageIndex
-      .filter((item) => item.local_file)
-      .map((item, index) => ({
-        src: item.local_file,
-        title: `课堂资料 ${String(index + 1).padStart(2, '0')}`,
-        caption: [item.action_time, item.source_name || '', item.ocr_char_count ? `OCR ${item.ocr_char_count} 字` : '']
-          .filter(Boolean)
-          .join(' · '),
-      }));
-    if (items.length) {
-      imageGallery = `<h2 id="课堂图片画廊">课堂图片画廊</h2>
-<div class="material-cluster">
-${items.map(renderMaterialFigure).join('\n')}
-</div>`;
-    }
-  } catch {
-    imageGallery = '';
-  }
+  const imageGallery = await renderImageGallery(note);
   const body = `${renderHeader('../../')}
   <main id="top">
     <section class="article-hero">
@@ -473,7 +495,7 @@ function renderAuditPage(notesData) {
         <li>5 个用户提供的 note_id 都已进入同一个 GitHub Pages 仓库。</li>
         <li>当前没有发现内容重复：5 个页面的 note_id 不同，公开分享笔记的 source_note_id 也互不相同。</li>
         <li>之前看起来“有一个重复/不完整”的原因，是第一篇老笔记还放在根目录素材结构里；现在已经迁移到 <code>notes/1912868579112712840/</code>，和另外 4 篇一致。</li>
-        <li>5 篇都提供独立拆解页和独立素材库页；拆解页按“术法道器势”分析，素材库页保留智能总结、逐字稿/文字记录、课堂资料索引。</li>
+        <li>5 篇都提供独立拆解页和独立素材库页；拆解页按“术法道器势”分析，并在正文底部直接嵌入智能总结、逐字稿/文字记录、课堂资料索引。</li>
         <li>课堂图片数量以接口实际返回为准：老笔记 9 张，商业预判 6 张，其余 3 篇分享接口未返回课堂图片文件。</li>
       </ul>
 
@@ -500,7 +522,7 @@ ${rows}
       </div>
 
       <h2>补全策略</h2>
-      <p>智能总结本身保留在素材库页，不再硬塞进拆解正文；拆解正文只做复盘、分析、补充模板和行动作业。这样既保留原始信息密度，又不会把阅读页变成流水账。</p>
+      <p>智能总结、逐字稿和课堂资料已经直接嵌入每篇拆解正文底部；独立素材库页保留同一份内容，主要用于快速核对原始材料。</p>
       <p>课堂资料只展示接口实际拿到的图片，不伪造不存在的资料。没有图片的三篇，素材库中会明确标注“分享接口未提供课堂图片文件”。</p>
     </article>
   </main>`;
