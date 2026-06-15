@@ -1,5 +1,68 @@
 # 洋哥商业心法 · 术法道器势系列拆解
 
+<!-- SIUSER-REPO-GUIDE:START -->
+## Repository Guide
+
+### What This Repository Does
+
+洋哥商业心法系列妙记拆解：按术法道器势整理智能总结、文字记录、课堂资料和补充模板的 GitHub Pages 站点
+
+### Online Entry Points
+
+- GitHub repository: https://github.com/siuserxiaowei/yangge-business-mindset-pages
+- Live / GitHub Pages: https://siuserxiaowei.github.io/yangge-business-mindset-pages/
+- Default branch: `main`
+- Primary language: `HTML`
+- Topics: `ai-startup`, `business-analysis`, `chinese-notes`, `github-pages`
+
+### How To Read / Learn This Repository
+
+1. 先读本 README，确认项目目标、在线入口和本地运行方式。
+2. 打开上方 Live / GitHub Pages 链接，先从最终效果理解项目。
+3. 按仓库目录从入口文件、数据文件、脚本和文档依次阅读。
+4. 如果要修改内容，先小范围改动，再运行本 README 中的验证命令。
+
+### Clone This Repository
+
+```bash
+git clone https://github.com/siuserxiaowei/yangge-business-mindset-pages.git
+cd yangge-business-mindset-pages
+```
+
+### Run Or View Locally
+
+```bash
+python3 -m http.server 8000
+```
+
+然后打开 `http://127.0.0.1:8000/`。
+
+### Repository Map
+
+| Path | Purpose |
+| --- | --- |
+| `README.md` | 项目入口说明，先读这里。 |
+| `index.html` | 静态站首页或页面入口。 |
+| `scripts/` | 构建、同步、生成或维护脚本。 |
+| `archive.html` | 项目文件。 |
+| `audit.html` | 项目文件。 |
+| `notes/` | 项目目录。 |
+| `styles.css` | 项目文件。 |
+
+### Maintenance Notes
+
+- Keep this README in sync when the project purpose, live link, or run commands change.
+- Prefer small, focused commits when changing code, data, or generated pages.
+- Run the relevant build or validation command before publishing changes.
+- If this is a generated/static archive, update the source data first, then regenerate the public files.
+
+### Privacy And Safety
+
+- Do not commit API keys, tokens, passwords, cookies, private URLs, or internal account data.
+- Keep private source material out of public GitHub Pages output unless it has been explicitly cleared for publication.
+- When in doubt, run a quick secret scan such as `rg -n "token|secret|password|access_key|authorization"` before pushing.
+<!-- SIUSER-REPO-GUIDE:END -->
+
 这是一个用于长期保存和学习「洋哥商业心法」系列 GET/妙记笔记的 GitHub Pages 静态仓库。
 
 仓库把 5 篇 GET 笔记中的智能总结、会议纪要、逐字稿/文字记录、课堂资料图片和补充拆解统一整理为可在线阅读的学习站点。每篇内容都按「术 / 法 / 道 / 器 / 势」重新拆解，并保留原始素材备份，避免原笔记后续关闭分享后无法查看。
